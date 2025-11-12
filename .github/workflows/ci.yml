@@ -1,0 +1,30 @@
+name: CI - Build and Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker image
+        run: docker build -t my-node-app .
+
+      - name: Run container
+        run: |
+          docker run -d -p 3000:3000 --name my-node-container my-node-app
+          sleep 5
+
+      - name: Test the app
+        run: |
+          curl -f http://localhost:3000 && echo "✅ Build and Test passed"
