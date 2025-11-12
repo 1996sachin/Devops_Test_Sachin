@@ -27,4 +27,8 @@ jobs:
 
       - name: Test the app
         run: |
+<<<<<<< HEAD
           curl -f http://localhost:3000 && echo "✅ Build and Test passed"
+=======
+          curl -f http://localhost:3000 && echo "Build and Test passed"
+>>>>>>> 18f842c (changed the pipeline file for docker list)
