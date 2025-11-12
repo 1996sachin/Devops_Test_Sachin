@@ -25,10 +25,9 @@ jobs:
           docker run -d -p 3000:3000 --name my-node-container my-node-app
           sleep 5
 
+      - name: List container running
+        run: docker ps
+
       - name: Test the app
         run: |
-<<<<<<< HEAD
-          curl -f http://localhost:3000 && echo "✅ Build and Test passed"
-=======
           curl -f http://localhost:3000 && echo "Build and Test passed"
->>>>>>> 18f842c (changed the pipeline file for docker list)
