@@ -27,4 +27,4 @@ jobs:
 
       - name: Test the app
         run: |
-          curl -f http://localhost:3000 && echo "Build and Test passed"
+          curl -f http://localhost:3000 && echo "✅ Build and Test passed"
