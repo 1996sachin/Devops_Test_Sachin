@@ -14,7 +14,7 @@ App: http://localhost:3000
 Prometheus: http://localhost:9090
 Grafana: http://localhost:3001 (Login: admin / admin)
 
-![Deploy Screenshot](https://github.com/1996sachin/Devops_Test_Sachin/blob/main/screenshots/deploy.sh.png?raw=true)
+![Deploy Screenshot](https://raw.githubusercontent.com/1996sachin/Devops_Test_Sachin/refs/heads/main/screenshots/deploy.sh.png)
 
 ## Monitoring / Logging Stack Used
 Prometheus + Grafana
